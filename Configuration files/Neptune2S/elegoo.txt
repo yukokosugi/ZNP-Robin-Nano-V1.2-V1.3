@@ -25,7 +25,7 @@
 
 #================ Bed Leveling    ==============
 
->cfg_leveling_mode			0			# 1:Auto-leveling; 0:Manual leveling
+>cfg_leveling_mode			1			# 1:Auto-leveling; 0:Manual leveling
 
 #=============== Manual Leveling  =============
 
@@ -39,16 +39,16 @@
 
 #================ Auto-leveling ===============
 
->BED_LEVELING_METHOD 		0	# 0:NULL_BED_LEVELING; 3:AUTO_BED_LEVELING_BILINEAR; 5:MESH_BED_LEVELING	
+>BED_LEVELING_METHOD 		3	# 0:NULL_BED_LEVELING; 3:AUTO_BED_LEVELING_BILINEAR; 5:MESH_BED_LEVELING	
 
 >GRID_MAX_POINTS_X 		4	# the number of grid points per dimension. <= 15
 >GRID_MAX_POINTS_Y 		4	#the number of grid points per dimension. <= 15		
 >Z_CLEARANCE_DEPLOY_PROBE	10	#  Z Clearance for Deploy/Stow	   > 0
 >Z_CLEARANCE_BETWEEN_PROBES	10	#  Z Clearance between probe points  > 0
 
->Z_SAFE_HOMING			0	# 0: Disable, 1: Enable, to avoid the probe in the hot bed when returning to zero
+>Z_SAFE_HOMING			1	# 0: Disable, 1: Enable, to avoid the probe in the hot bed when returning to zero
 
->Z_MIN_PROBE_PIN_MODE		0	# 0 : NULL; 1: Z_MIN; 2: Z_MAX ; Select for a probe connected to Z-Min or Z-Max.
+>Z_MIN_PROBE_PIN_MODE		1	# 0 : NULL; 1: Z_MIN; 2: Z_MAX ; Select for a probe connected to Z-Min or Z-Max.
 
 
 
@@ -72,7 +72,7 @@
 
 
 #=============== Wifi Settings ================
-#Do not display the wifi button                     0:display     1£ºnot display
+#Do not display the wifi button                     0:display     1Â£Âºnot display
 >DISABLE_WIFI		1
 
 
@@ -156,7 +156,7 @@
 >PULSE_DELAY		5		#Pulse hold time (unit: machine cycle)
 
 #================= Thermal Settings ==============
->TEMP_SENSOR_0		1		#1: 100k thermistor£»-3 : thermocouple with MAX31855
+>TEMP_SENSOR_0		1		#1: 100k thermistorÂ£Â»-3 : thermocouple with MAX31855
 
 >EXTRUDE_MINTEMP 	170		#When printing, the lowest temperature of the extruder (for protection)
 >HEATER_0_MINTEMP	5		#Extrusion 0 minimum temperature value
@@ -177,13 +177,13 @@
 >WATCH_BED_TEMP_INCREASE 		2       #Degrees Celsius
 
 # Type of heat manager for extruder.
->PIDTEMPE			1	# Mode selection£¬1:PID; 0:bang-bang
+>PIDTEMPE			1	# Mode selectionÂ£Â¬1:PID; 0:bang-bang
 >DEFAULT_Kp			22.2	# P value setting
 >DEFAULT_Ki			1.08	# I value setting
 >DEFAULT_Kd			114	# D value setting
 
 #Type of heat manager for this heatedBed.
->PIDTEMPBED			0	# Mode selection£¬1:PID; 0:bang-bang ; be not recommended for use
+>PIDTEMPBED			0	# Mode selectionÂ£Â¬1:PID; 0:bang-bang ; be not recommended for use
 >DEFAULT_bedKp			10.00	# P value setting
 >DEFAULT_bedKi			0.023	# I value setting
 >DEFAULT_bedKd			305.4	# D value setting
@@ -273,7 +273,7 @@
 >WISI_LIST_SCAN                                     1
 >cfg_insert_det_module		0			#Assemble power outage module(1:mks 220det;0:mks pwc)
 >cfg_have_ups_device		0			#UPS(1:yes;0:no)
->cfg_print_over_auto_close		0			#auto-off when print finishes(1:yes£»0:no)
+>cfg_print_over_auto_close		0			#auto-off when print finishes(1:yesÂ£Â»0:no)
 >PRINT_FINISHED_COUNT 		180			#Shutdown delay time after hitting (unit: second)
 
 #= Language settings =
@@ -283,7 +283,7 @@
 
 #=Display Effect(refer to MKS TFT datasheet)=
 #Settings interface custom function 
->setmenu_func1_display		1		#1:display this button£¬0:no
+>setmenu_func1_display		1		#1:display this buttonÂ£Â¬0:no
 
 #each command must be separated by semicolon ";"
 >setmenu_func1:M84;
